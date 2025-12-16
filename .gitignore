@@ -15,3 +15,6 @@ data/processed/
 
 # Editor
 .vscode/
+
+# Part 2 inspect scratch (do not commit)
+docs/inspect_part2_*.json
