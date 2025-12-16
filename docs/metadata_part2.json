@@ -1,0 +1,478 @@
+{
+  "run_history": [
+    {
+      "tag": "20251215_1650",
+      "ran": [
+        "hpi"
+      ],
+      "python": "3.13.2"
+    },
+    {
+      "tag": "20251215_1650",
+      "ran": [
+        "cpi"
+      ],
+      "python": "3.13.2"
+    },
+    {
+      "tag": "20251215_1650",
+      "ran": [
+        "policy"
+      ],
+      "python": "3.13.2"
+    },
+    {
+      "tag": "20251215_1650",
+      "ran": [
+        "policy"
+      ],
+      "python": "3.13.2"
+    },
+    {
+      "tag": "20251215_1650",
+      "ran": [
+        "policy"
+      ],
+      "python": "3.13.2"
+    },
+    {
+      "tag": "20251215_1650",
+      "ran": [
+        "policy"
+      ],
+      "python": "3.13.2"
+    },
+    {
+      "tag": "20251215_1650",
+      "ran": [
+        "analysis"
+      ],
+      "python": "3.13.2"
+    }
+  ],
+  "tables": {
+    "fact_hpi_long": {
+      "source": {
+        "dataset": "ssb_hpi_07221",
+        "path": "data/raw/ssb_hpi_07221_20251215_1650.parquet"
+      },
+      "outputs": {
+        "csv": "data/processed/fact_hpi_long.csv",
+        "parquet": "data/processed/fact_hpi_long.parquet",
+        "parquet_written": true,
+        "tag": "20251215_1650"
+      },
+      "validation": {
+        "id_cols_detected": [
+          "Boligtype"
+        ],
+        "time_cols_detected_count": 270,
+        "time_parse_success_rate": 1.0,
+        "min_quarter": "1992Q1",
+        "max_quarter": "2025Q3",
+        "profile": {
+          "shape": {
+            "rows": 270,
+            "cols": 7
+          },
+          "columns": [
+            "dataset",
+            "boligtype_code",
+            "series",
+            "time_period",
+            "quarter",
+            "quarter_start",
+            "value"
+          ],
+          "missing_in_key_cols": {
+            "dataset": 0,
+            "boligtype_code": 0,
+            "series": 0,
+            "quarter": 0
+          },
+          "duplicate_key_rows": 0
+        },
+        "value_sanity": {
+          "non_numeric_or_missing": 52,
+          "negative_count": 0,
+          "min": 17.8,
+          "max": 154.4,
+          "q1": 54.225,
+          "q3": 115.25,
+          "iqr": 61.025,
+          "outlier_lo_3iqr": -128.85,
+          "outlier_hi_3iqr": 298.325,
+          "outlier_count_3iqr": 0
+        }
+      }
+    },
+    "fact_cpi_long": {
+      "source": {
+        "dataset": "ssb_cpi_08981",
+        "path": "data/raw/ssb_cpi_08981_20251215_1650.parquet"
+      },
+      "outputs": {
+        "csv": "data/processed/fact_cpi_long.csv",
+        "parquet": "data/processed/fact_cpi_long.parquet",
+        "parquet_written": true,
+        "tag": "20251215_1650"
+      },
+      "validation": {
+        "id_cols_detected": [
+          "Maaned"
+        ],
+        "year_cols_detected_count": 34,
+        "maaned_code_observed": "90",
+        "maaned_label_observed": null,
+        "period_kind_inferred": "annual_assumed_from_code",
+        "long_profile": {
+          "shape": {
+            "rows": 34,
+            "cols": 8
+          },
+          "columns": [
+            "dataset",
+            "maaned_code",
+            "maaned_label",
+            "period_kind",
+            "series",
+            "year",
+            "time_period",
+            "value"
+          ],
+          "missing_in_key_cols": {
+            "dataset": 0,
+            "series": 0,
+            "year": 0,
+            "maaned_code": 0
+          },
+          "duplicate_key_rows": 0
+        },
+        "quarterly_profile": {
+          "shape": {
+            "rows": 136,
+            "cols": 9
+          },
+          "columns": [
+            "dataset",
+            "maaned_code",
+            "maaned_label",
+            "series",
+            "year",
+            "quarter",
+            "quarter_start",
+            "value",
+            "method"
+          ],
+          "missing_in_key_cols": {
+            "dataset": 0,
+            "series": 0,
+            "quarter": 0,
+            "maaned_code": 0
+          },
+          "duplicate_key_rows": 0
+        },
+        "long_value_sanity": {
+          "non_numeric_or_missing": 1,
+          "negative_count": 0,
+          "min": 63.4,
+          "max": 133.6,
+          "q1": 75.5,
+          "q3": 103.6,
+          "iqr": 28.099999999999994,
+          "outlier_lo_3iqr": -8.799999999999983,
+          "outlier_hi_3iqr": 187.89999999999998,
+          "outlier_count_3iqr": 0
+        },
+        "quarterly_value_sanity": {
+          "non_numeric_or_missing": 4,
+          "negative_count": 0,
+          "min": 63.4,
+          "max": 133.6,
+          "q1": 75.5,
+          "q3": 103.6,
+          "iqr": 28.099999999999994,
+          "outlier_lo_3iqr": -8.799999999999983,
+          "outlier_hi_3iqr": 187.89999999999998,
+          "outlier_count_3iqr": 0
+        },
+        "min_year": 1992,
+        "max_year": 2025,
+        "min_quarter": "1992Q1",
+        "max_quarter": "2025Q4"
+      }
+    },
+    "fact_cpi_quarterly": {
+      "source": {
+        "dataset": "ssb_cpi_08981",
+        "path": "data/raw/ssb_cpi_08981_20251215_1650.parquet"
+      },
+      "outputs": {
+        "csv": "data/processed/fact_cpi_quarterly.csv",
+        "parquet": "data/processed/fact_cpi_quarterly.parquet",
+        "parquet_written": true,
+        "tag": "20251215_1650"
+      },
+      "validation": {
+        "id_cols_detected": [
+          "Maaned"
+        ],
+        "year_cols_detected_count": 34,
+        "maaned_code_observed": "90",
+        "maaned_label_observed": null,
+        "period_kind_inferred": "annual_assumed_from_code",
+        "long_profile": {
+          "shape": {
+            "rows": 34,
+            "cols": 8
+          },
+          "columns": [
+            "dataset",
+            "maaned_code",
+            "maaned_label",
+            "period_kind",
+            "series",
+            "year",
+            "time_period",
+            "value"
+          ],
+          "missing_in_key_cols": {
+            "dataset": 0,
+            "series": 0,
+            "year": 0,
+            "maaned_code": 0
+          },
+          "duplicate_key_rows": 0
+        },
+        "quarterly_profile": {
+          "shape": {
+            "rows": 136,
+            "cols": 9
+          },
+          "columns": [
+            "dataset",
+            "maaned_code",
+            "maaned_label",
+            "series",
+            "year",
+            "quarter",
+            "quarter_start",
+            "value",
+            "method"
+          ],
+          "missing_in_key_cols": {
+            "dataset": 0,
+            "series": 0,
+            "quarter": 0,
+            "maaned_code": 0
+          },
+          "duplicate_key_rows": 0
+        },
+        "long_value_sanity": {
+          "non_numeric_or_missing": 1,
+          "negative_count": 0,
+          "min": 63.4,
+          "max": 133.6,
+          "q1": 75.5,
+          "q3": 103.6,
+          "iqr": 28.099999999999994,
+          "outlier_lo_3iqr": -8.799999999999983,
+          "outlier_hi_3iqr": 187.89999999999998,
+          "outlier_count_3iqr": 0
+        },
+        "quarterly_value_sanity": {
+          "non_numeric_or_missing": 4,
+          "negative_count": 0,
+          "min": 63.4,
+          "max": 133.6,
+          "q1": 75.5,
+          "q3": 103.6,
+          "iqr": 28.099999999999994,
+          "outlier_lo_3iqr": -8.799999999999983,
+          "outlier_hi_3iqr": 187.89999999999998,
+          "outlier_count_3iqr": 0
+        },
+        "min_year": 1992,
+        "max_year": 2025,
+        "min_quarter": "1992Q1",
+        "max_quarter": "2025Q4"
+      }
+    },
+    "fact_policy_rate": {
+      "source": {
+        "dataset": "norgesbank_policy_rate",
+        "path": "data/raw/norgesbank_policy_rate_20251215_1650.parquet"
+      },
+      "outputs": {
+        "csv": "data/processed/fact_policy_rate.csv",
+        "parquet": "data/processed/fact_policy_rate.parquet",
+        "parquet_written": true,
+        "tag": "20251215_1650"
+      },
+      "validation": {
+        "time_parse_success_rate": 1.0,
+        "min_date": "1986-01-02",
+        "max_date": "2025-12-12",
+        "unique_series_id_count": 3,
+        "profile": {
+          "shape": {
+            "rows": 22468,
+            "cols": 15
+          },
+          "columns": [
+            "dataset",
+            "series_id",
+            "freq_code",
+            "freq_label",
+            "instrument_type_code",
+            "instrument_type_label",
+            "tenor_code",
+            "tenor_label",
+            "unit_code",
+            "unit_label",
+            "collection_code",
+            "collection_label",
+            "decimals",
+            "date",
+            "rate"
+          ],
+          "missing_in_key_cols": {
+            "dataset": 0,
+            "series_id": 0,
+            "date": 0
+          },
+          "duplicate_key_rows": 0
+        },
+        "value_sanity": {
+          "non_numeric_or_missing": 0,
+          "negative_count": 1446,
+          "min": -1.0,
+          "max": 50.0,
+          "q1": 1.5,
+          "q3": 6.25,
+          "iqr": 4.75,
+          "outlier_lo_3iqr": -12.75,
+          "outlier_hi_3iqr": 20.5,
+          "outlier_count_3iqr": 9
+        }
+      }
+    },
+    "fact_policy_rate_changes": {
+      "source": {
+        "dataset": "norgesbank_policy_rate",
+        "path": "data/raw/norgesbank_policy_rate_20251215_1650.parquet"
+      },
+      "outputs": {
+        "csv": "data/processed/fact_policy_rate_changes.csv",
+        "parquet": "data/processed/fact_policy_rate_changes.parquet",
+        "parquet_written": true,
+        "tag": "20251215_1650"
+      },
+      "validation": {
+        "profile": {
+          "shape": {
+            "rows": 302,
+            "cols": 6
+          },
+          "columns": [
+            "dataset",
+            "series_id",
+            "change_date",
+            "previous_rate",
+            "new_rate",
+            "delta_rate"
+          ],
+          "missing_in_key_cols": {
+            "dataset": 0,
+            "series_id": 0,
+            "change_date": 0
+          },
+          "duplicate_key_rows": 0
+        },
+        "min_change_date": "1986-01-03",
+        "max_change_date": "2025-09-19",
+        "change_events_count": 302,
+        "delta_sanity": {
+          "non_numeric_or_missing": 0,
+          "negative_count": 150,
+          "min": -36.0,
+          "max": 20.0,
+          "q1": -0.5,
+          "q3": 0.25,
+          "iqr": 0.75,
+          "outlier_lo_3iqr": -2.75,
+          "outlier_hi_3iqr": 2.5,
+          "outlier_count_3iqr": 7
+        }
+      }
+    },
+    "analysis_ready_quarterly": {
+      "source": {
+        "dataset": "derived_join",
+        "path": null
+      },
+      "outputs": {
+        "csv": "data/processed/analysis_ready_quarterly.csv",
+        "parquet": "data/processed/analysis_ready_quarterly.parquet",
+        "parquet_written": true,
+        "tag": "20251215_1650"
+      },
+      "validation": {
+        "inputs": {
+          "fact_hpi_long": "data/processed/fact_hpi_long.csv",
+          "fact_cpi_quarterly": "data/processed/fact_cpi_quarterly.csv",
+          "fact_policy_rate": "data/processed/fact_policy_rate.csv",
+          "fact_policy_rate_changes": "data/processed/fact_policy_rate_changes.csv"
+        },
+        "policy_context": {
+          "included": true,
+          "series_id_used": "KPRA.OL.R.E"
+        },
+        "profile": {
+          "shape": {
+            "rows": 135,
+            "cols": 22
+          },
+          "columns": [
+            "boligtype_code",
+            "quarter",
+            "hpi_index",
+            "hpi_sa_index",
+            "quarter_start",
+            "cpi_index",
+            "cpi_method",
+            "policy_rate_avg",
+            "policy_rate_end",
+            "policy_rate_min",
+            "policy_rate_max",
+            "policy_obs_count",
+            "policy_change_events",
+            "policy_delta_sum",
+            "policy_delta_abs_sum",
+            "hpi_index_qoq_pct",
+            "hpi_index_yoy_pct",
+            "hpi_sa_index_qoq_pct",
+            "hpi_sa_index_yoy_pct",
+            "cpi_yoy_pct",
+            "real_hpi_proxy",
+            "real_hpi_sa_proxy"
+          ],
+          "missing_in_key_cols": {
+            "boligtype_code": 0,
+            "quarter": 0
+          },
+          "duplicate_key_rows": 0
+        },
+        "min_quarter": "1992Q1",
+        "max_quarter": "2025Q3",
+        "missing_cpi": 3,
+        "hpi_index_negative_count": 0,
+        "hpi_sa_index_negative_count": 0,
+        "cpi_index_negative_count": 0,
+        "real_hpi_proxy_negative_count": 0,
+        "real_hpi_sa_proxy_negative_count": 0
+      }
+    }
+  },
+  "latest_tag": "20251215_1650"
+}
