@@ -1,16 +1,17 @@
 # Python
-__pycache__/
-*.py[cod]
-
-# Virtual environment
 .venv/
+__pycache__/
+*.pyc
 
-# Environment variables
+# Data (do not commit raw extracts)
+data/raw/
+data/processed/
+
+# Secrets / env
 .env
 
-# Raw data (do not commit)
-data/raw/
-
-# OS / editor
+# macOS
 .DS_Store
+
+# Editor
 .vscode/
