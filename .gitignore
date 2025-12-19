@@ -20,10 +20,5 @@ data/processed/
 docs/inspect_part2_*.json
 
 # Excel temp/lock files
-~.xlsx
-
-# Excel temp/lock files (specific)
-excel/~.xlsx
-
-# Excel lock files (correct)
-excel/~\.xlsx
+~$*.xlsx
+excel/~$*.xlsx
