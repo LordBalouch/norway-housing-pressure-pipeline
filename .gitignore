@@ -21,3 +21,6 @@ docs/inspect_part2_*.json
 
 # Excel temp/lock files
 ~.xlsx
+
+# Excel temp/lock files (specific)
+excel/~.xlsx
