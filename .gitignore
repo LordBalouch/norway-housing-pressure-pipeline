@@ -22,3 +22,9 @@ docs/inspect_part2_*.json
 # Excel temp/lock files
 ~$*.xlsx
 excel/~$*.xlsx
+
+# macOS metadata
+**/.DS_Store
+
+# Tableau temp/backup artifacts
+tableau/.~*

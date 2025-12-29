@@ -26,7 +26,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='mart_housing_pressure_quarterly' name='textscan.0tkwhka1dzkvim1bfo5w80yg1n2e'>
-            <connection class='textscan' directory='/Users/babak/Desktop/Data-Analysis and Science/PROJECT for my portfolio/norway-housing-pressure-pipeline/data/processed' filename='mart_housing_pressure_quarterly.csv' password='' server='' />
+            <connection class='textscan' directory='data/processed' filename='mart_housing_pressure_quarterly.csv' password='' server='' />
           </named-connection>
         </named-connections>
         <relation connection='textscan.0tkwhka1dzkvim1bfo5w80yg1n2e' name='mart_housing_pressure_quarterly.csv' table='[mart_housing_pressure_quarterly#csv]' type='table'>
