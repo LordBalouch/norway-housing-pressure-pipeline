@@ -7,6 +7,7 @@ trend (HPI level), growth regimes (YoY/QoQ), volatility regimes (QoQ variability
 How have housing price growth and volatility evolved since 1992, and how do they relate to monetary policy context over time?
 
 ## Deliverables (open these first)
+
 - Tableau dashboard exports (PNG): `tableau/exports/`
   - `tableau/exports/D1_executive_overview.png`
   - `tableau/exports/D2_growth.png`
@@ -20,6 +21,9 @@ How have housing price growth and volatility evolved since 1992, and how do they
 - Data dictionary: `docs/data_dictionary.md`
 - Validation metadata: `docs/metadata_part1.json`, `docs/metadata_part2.json`
 - Data sources notes: `docs/data_sources.md`
+
+## Report
+- Full case study report (DOCX): [Norway Housing Pressure Tracker Report](docs/Norway_Housing_Pressure_Tracker_Report.docx)
 
 ## How to reproduce
 Follow the single run-order document:
