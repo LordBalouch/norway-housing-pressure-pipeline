@@ -1,4 +1,4 @@
-D1_executive_overview.png
+(D1_executive_overview.png)
 
 # Norway Housing Pressure Tracker (1992–present)
 
