@@ -1,3 +1,5 @@
+D1_executive_overview.png
+
 # Norway Housing Pressure Tracker (1992–present)
 
 A reproducible analytics pipeline and reviewer-ready deliverables to track Norwegian housing price dynamics over time:
