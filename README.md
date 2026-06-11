@@ -16,6 +16,8 @@ Quarterly data, 1992Q1–2025Q3 (135 quarters), combining SSB's housing price in
 
 ![Growth regimes (YoY and QoQ)](tableau/exports/D2_growth.png)
 
+**Interactive dashboards:** [Tableau Public](https://public.tableau.com/app/profile/babak.balouch5382/viz/norway_housing_pressure_part4/D1ExecutiveOverview)
+
 - **The 2010s were the calmest decade.** Average QoQ volatility (std dev): 2.8% (1990s), 3.1% (2000s), 2.3% (2010s), 3.1% (2020s) — the 2000s and 2020s were the most turbulent.
 
 ![Volatility by decade](tableau/exports/D3_volatility.png)
